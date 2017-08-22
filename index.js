@@ -1,1 +1,1 @@
-require('http').createServer((i,o)={o.write("Hello world!");o.end()}).listen('80',()=>{console.log("http protocol listening!")})
+require('http').createServer((i,o)=>{o.write("Hello world!");o.end()}).listen('80',()=>{console.log("http protocol listening!")})
