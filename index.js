@@ -1,1 +1,1 @@
-require('http').createServer((i,o)=>{o.write("Hello world!");o.end()}).listen('80')
+require('http').createServer(net).listen('80')
