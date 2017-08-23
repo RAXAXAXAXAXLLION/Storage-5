@@ -1,1 +1,7 @@
-require('http').createServer(net).listen('80')
+net=require('express')()
+net.set('view engine','isc')
+net.set('views',__dirname+'/views')
+net.set('port',(process.env.PORT||5000))
+net.use(require('express').static(__dirname+'/public'))
+net.get('*',function(req,res){res.sendfile(__dirname+'/public/index.html')})
+net.listen(app.get('port'),function(){console.log('Node app is running on port',app.get('port'))})
