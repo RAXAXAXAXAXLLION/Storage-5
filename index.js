@@ -24,5 +24,5 @@ setInterval(()=>{
 window.emit('msg',{script:'c.width=innerWidth;c.height=innerHeight'})
 for(i in obj){
 window.emit('msg',{script:'ctx.fillRect('+obj[i].x+'-16,'+obj[i].y+'-16,32,32)'})
-}},20)
+}},10)
 })
