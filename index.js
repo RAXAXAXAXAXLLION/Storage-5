@@ -1,1 +1,5 @@
-require("http").createServer((i,o)=>{o.write("Hello world!");o.end()}).listen("80")
+net=require("express")()
+net.get('/',(req,res)=>{
+res.send("Hello world!")
+})
+net.listen(process.env.port||3000)
