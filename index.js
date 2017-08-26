@@ -6,5 +6,7 @@ res.write('<script>io().on("msg",(e)=>{eval(e.script)})</script>')
 res.end()
 }).listen(process.env.PORT || 3000)
 ).on("connection",(window)=>{
-window.emit('msg',{script:'alert("Hello world!")'})
+window.emit('msg',{script:'document.body.backgroundColor="black"'})
+window.emit('msg',{script:'document.body.color="green"'})
+window.emit('msg',{script:'document.write("Hello!")'})
 })
