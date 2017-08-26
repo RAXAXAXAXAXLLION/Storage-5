@@ -24,5 +24,5 @@ setInterval(()=>{
 window.emit('msg',{script:'console.clear()'})
 for(i in obj){
 window.emit('msg',{script:'console.log("'+obj[i].x+'")'})
-}},10)
+}},500)
 })
