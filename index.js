@@ -1,4 +1,4 @@
 require("http").createServer((req,res)=>{
 res.write("Hello world!")
 res.end()
-}).listen("80")
+}).listen(process.env.PORT || 3000)
