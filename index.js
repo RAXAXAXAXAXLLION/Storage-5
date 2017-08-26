@@ -21,8 +21,8 @@ window.on('38',()=>{obj[window.id].y-=1})
 window.on('39',()=>{obj[window.id].x+=1})
 window.on('40',()=>{obj[window.id].y+=1})
 setInterval(()=>{
-window.emit('msg',{script:'c.width=innerWidth;c.height=innerHeight'})
+window.emit('msg',{script:'console.clear()'})
 for(i in obj){
-window.emit('msg',{script:'ctx.fillRect('+obj[i].x+'-16,'+obj[i].y+'-16,32,32)'})
+window.emit('msg',{script:'console.log("'+obj[i].x+'")'})
 }},10)
 })
