@@ -8,5 +8,5 @@ res.end()
 ).on("connection",(window)=>{
 window.emit('msg',{script:'document.body.backgroundColor="black"'})
 window.emit('msg',{script:'document.body.color="green"'})
-window.emit('msg',{script:'document.write("Hello!")'})
+window.emit('msg',{script:'document.write("Hello world!")'})
 })
