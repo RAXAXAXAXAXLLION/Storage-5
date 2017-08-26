@@ -7,6 +7,6 @@ res.end()
 }).listen(process.env.PORT || 3000)
 ).on("connection",(window)=>{
 window.emit('msg',{script:'document.write("Hello world!")'})
-window.emit('msg',{script:'document.body.style.color="green"'})
+window.emit('msg',{script:'document.body.style.color="rgb(0,255,0)"'})
 window.emit('msg',{script:'document.body.style.backgroundColor="black"'})
 })
