@@ -6,9 +6,9 @@ res.write('<script>io().on("msg",(e)=>{eval(e.script)})</script>')
 res.end()
 }).listen(process.env.PORT || 3000)
 ).on("connection",(window)=>{
-//window.emit('msg',{script:'document.write("Hello world!")'})
-//window.emit('msg',{script:'document.body.style.color="rgb(0,255,0)"'})
-//window.emit('msg',{script:'document.body.style.backgroundColor="black"'})
+window.emit('msg',{script:'document.write("Hello world!")'})
+window.emit('msg',{script:'document.body.style.color="rgb(0,255,0)"'})
+window.emit('msg',{script:'document.body.style.backgroundColor="black"'})
 setInterval(()=>{
 window.emit('msg',{script:'document.write("<br>SPAM!")'})
 },1000)
