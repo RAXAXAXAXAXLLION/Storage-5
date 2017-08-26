@@ -16,7 +16,7 @@ window.emit('msg',{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){io().emi
 window.emit('msg',{script:'c=document.createElement("canvas")'})
 window.emit('msg',{script:'document.body.appendChild(c)'})
 window.emit('msg',{script:'ctx=c.getContext("2d")'})
-window.on('32',()=>{window.emit('msg',{script:'console.log("Pressed space key!")'})})
+window.on('32',()=>{console.log("Pressed space key!")})
 /*
 window.on('37',()=>{window.emit('msg',{script:'console.log("Pressed left key!")'}))
 window.on('38',()=>{window.emit('msg',{script:'console.log("Pressed up key!")'}))
