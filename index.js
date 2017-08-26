@@ -12,20 +12,18 @@ obj[window.id]={x:32,y:32}
 window.emit('msg',{script:'k=[]'})
 window.emit('msg',{script:'document.body.style.margin="0"'})
 window.emit('msg',{script:'onkeyup=onkeydown=(e)=>{k[e.keyCode]=e.type="keydown"}'})
-window.emit('msg',{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){io().emit(i)}}},1000)'})
+window.emit('msg',{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){io().emit(i)}}},100)'})
 window.emit('msg',{script:'c=document.createElement("canvas")'})
 window.emit('msg',{script:'document.body.appendChild(c)'})
 window.emit('msg',{script:'ctx=c.getContext("2d")'})
 window.on('32',()=>{console.log("Pressed space key!")})
-/*
-window.on('37',()=>{window.emit('msg',{script:'console.log("Pressed left key!")'}))
-window.on('38',()=>{window.emit('msg',{script:'console.log("Pressed up key!")'}))
-window.on('39',()=>{window.emit('msg',{script:'console.log("Pressed right key!")'}))
-window.on('40',()=>{window.emit('msg',{script:'console.log("Pressed down key!")'}))
+window.on('37',()=>{obj[window.id].x-=1})
+window.on('38',()=>{obj[window.id].y-=1})
+window.on('39',()=>{obj[window.id].x+=1})
+window.on('40',()=>{obj[window.id].y+=1})
 setInterval(()=>{
 window.emit('msg',{script:'console.clear()'})
 for(i in obj){
 window.emit('msg',{script:'console.log("'+obj[i].x+'")'})
 }},1000)
-*/
 })
