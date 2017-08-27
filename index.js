@@ -25,5 +25,5 @@ window.emit('msg',{script:'c.width=innerWidth'})
 window.emit('msg',{script:'c.height=innerHeight'})
 for(i in obj){
 window.emit('msg',{script:'ctx.fillRect('+obj[i].x+'-16,'+obj[i].y+'-16,32,32)'})
-}},100)
+}},1)
 })
