@@ -11,7 +11,7 @@ window.id=Math.floor(Math.random()*Math.pow(10,10))
 obj[window.id]={x:32,y:32}
 window.emit('msg',{script:'k=[]'})
 window.emit('msg',{script:'document.body.style.margin="0"'})
-window.emit('msg',{script:'onkeyup=onkeydown=(e)=>{k[e.keyCode]=e.type="keydown"}'})
+window.emit('msg',{script:'onkeyup=onkeydown=(e)=>{k[e.keyCode]=e.type=="keydown"}'})
 window.emit('msg',{script:'setInterval(()=>{for(i=0;i<400;i++){if(k[i]){console.log(i)}}},1)'})
 window.emit('msg',{script:'c=document.createElement("canvas")'})
 window.emit('msg',{script:'document.body.appendChild(c)'})
