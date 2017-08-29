@@ -24,6 +24,9 @@ setInterval(()=>{
 w.emit('msg',{script:'c.width=innerWidth'})
 w.emit('msg',{script:'c.height=innerHeight'})
 for(i in obj){
-w.emit('msg',{script:'ctx.fillRect('+obj[i].x-obj[w.i].x+'-c.width-16,'+obj[i].y-obj[w.i].y+'-c.height-16,32,32)'})
+w.emit('msg',{script:'ctx.fillRect('+
+eval(obj[i].x-obj[w.i].x-obj[w.i].s)+'+c.width/2,'+
+eval(obj[i].y-obj[w.i].y-obj[w.i].s)+'+c.height/2,'+
+eval(obj[w.i].s*2)+','+eval(obj[w.i].s*2)+')'})
 }},1)
 })
